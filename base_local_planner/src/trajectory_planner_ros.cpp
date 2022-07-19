@@ -187,7 +187,7 @@ namespace base_local_planner {
 
       private_nh.param("occdist_scale", occdist_scale, 0.01);
 
-      bool meter_scoring;
+      bool meter_scoring = false;
       if ( ! private_nh.hasParam("meter_scoring")) {
         ROS_WARN("Trajectory Rollout planner initialized with param meter_scoring not set. Set it to true to make your settings robust against changes of costmap resolution.");
       } else {
